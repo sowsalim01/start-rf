@@ -13,9 +13,17 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
+        :root {
+            --bg-1: #ff7e5f;
+            --bg-2: #feb47b;
+            --accent: #ffd6a5;
+            --accent-2: #ff9a8b;
+            --muted-panel: rgba(255, 255, 255, 0.08);
+        }
+        
         body {
-            background: linear-gradient(135deg, #1a2980, #26d0ce);
-            color: #fff;
+            background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+            color: #111;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -28,12 +36,12 @@
         .container {
             max-width: 800px;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            background-color: var(--muted-panel);
+            backdrop-filter: blur(8px);
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
         
         header {
@@ -43,7 +51,7 @@
         h1 {
             font-size: 2.8rem;
             margin-bottom: 10px;
-            background: linear-gradient(to right, #00ffcc, #00ccff);
+            background: linear-gradient(to right, var(--accent), var(--accent-2));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -154,7 +162,7 @@
         }
         
         .log-time {
-            color: #00ccff;
+            color: var(--accent-2);
             min-width: 90px;
         }
         
@@ -285,7 +293,7 @@
     <script>
         // Configuration
         // REMPLACEZ CETTE URL PAR CELLE DE VOTRE SITE RENDER
-        const RENDER_SITE_URL = "https://ordirapide.onrender.com";
+        const RENDER_SITE_URL = "https://rf-64nh.onrender.com/";
         const REQUEST_INTERVAL = 5 * 60 * 1000; // 5 minutes en millisecondes
         
         // Variables d'état
